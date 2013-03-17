@@ -2,7 +2,7 @@
 // @name           Netflix Hotkeys
 // @description    Adds hotkeys to netflix.com
 // @match          *://*.netflix.com/*
-// @version        2
+// @version        3
 // ==/UserScript==
 
 // w - previous row
@@ -109,6 +109,3 @@ document.onkeydown = function (ev) {
         break;
     }
 };
-
-// init to first row, first index available
-scrollVertical(0);

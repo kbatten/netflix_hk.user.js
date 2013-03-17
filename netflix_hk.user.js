@@ -2,7 +2,7 @@
 // @name           Netflix Hotkeys
 // @description    Adds hotkeys to netflix.com
 // @match          *://*.netflix.com/*
-// @version        4
+// @version        5
 // ==/UserScript==
 
 // w - previous row
@@ -22,6 +22,8 @@ function clearItem(row, videoIndex) {
     try {
         var elem = document.getElementById("slider_" + row).childNodes[1].childNodes[videoIndex];
         elem.style.border = "none";
+        elem.style.borderRadius = "";
+        elem.style.backgroundColor = "";
     } catch (err) {
     }
 }
@@ -29,7 +31,9 @@ function selectItem(row, videoIndex) {
     "use strict";
     try {
         var elem = document.getElementById("slider_" + row).childNodes[1].childNodes[videoIndex];
-        elem.style.border = "thin dashed #CC0000";
+        elem.style.border = "2px dashed #b9090b";
+        elem.style.borderRadius = "5px";
+        elem.style.backgroundColor = "#bfbfbf";
         elem.scrollIntoView();
         window.scrollBy(0, -100);
     } catch (err) {
